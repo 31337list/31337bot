@@ -58,7 +58,7 @@ client.on("messageCreate", (message) => {
 //commands
 client.on('messageCreate', (message) => {
   if (message.content === '!commands') {
-    message.channel.send('Commands:\n----------------------------\n!9anime - search 9anime\n!31337 - link to 31337\n!all - search all anime sites\n!jaden - jaden smith tweets lol');
+    message.channel.send('Commands:\n----------------------------\n!9anime - search 9anime or list 9anime mirrors\n!31337 - link to 31337\n!allanime - search all anime sites\n!jaden - jaden smith tweets lol');
   }
 });
 
@@ -104,10 +104,6 @@ message.channel.send(final_urls.join('\n'));
 }
 });
 
-// Set custom status  // very broken
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("With your mum", { type: "PLAYING" });
-});
+
 
 client.login(process.env.DISCORD_TOKEN);
