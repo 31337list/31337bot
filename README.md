@@ -12,6 +12,11 @@ commands:
 !jaden - jaden smith tweets lol
 
 
+Add it to your server here:
+https://discord.com/api/oauth2/authorize?client_id=1100578476521693244&permissions=8&scope=bot%20applications.commands
+
+-------------------------------------------------------------------------------------------
+
 TODO:
 
 - repack search, games search
@@ -19,3 +24,5 @@ TODO:
 - adblock (ublock) link
 - admin commands
 - *a lot* more j smith quotes
+
+https://discord.com/api/oauth2/authorize?client_id=1100578476521693244&permissions=8&scope=bot%20applications.commands
