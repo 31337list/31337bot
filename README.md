@@ -1,6 +1,6 @@
 # 31337bot
 discord bot for 31337list
--------------------------------------------------------------------------------------------
+
 
 take the code and do what u want with it, its shit anyways
 
