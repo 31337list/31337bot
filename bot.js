@@ -45,6 +45,13 @@ const quotes = [
   "Can I Really Bring The Essence Through These Singing Lessons And Google Ping Investments 10:03 AM · Jan 8, 2015",
   "The Moment That Truth Is Organized It Becomes A Lie. - 3:56 PM · Apr 5, 2014",
   "Hey Are You Jaden Can I Have A Picture With You No Cause I'm Super Sad But We Can Sit And Talk. - 8:50 AM · Sep 30, 2014",
+  "Just Stare In The Mirror And Cry And You'll Be Good. 7:39 AM · Mar 4, 2015",
+  "If Newborn Babies Could Speak They Would Be The Most Intelligent Beings On Planet Earth. 9:23 AM · Sep 13, 2013",
+  "The More Time You Spend Awake The More Time You Spend Asleep. 12:43 PM · Feb 13, 2015",
+  "I Don't Want You Guys To Think Because I Was Born In America That I Speak And Abide By English Grammar. I Speak Jaden, Indefinitely. 12:43 PM · Feb 13, 2015",
+  "Every 7 Years Your Body Is Completely Replaced With Entirely New Cells So Just Because You Look The Same Doesn't Mean You Are. 8:12 PM · Nov 2, 2014",
+  "How Can Mirrors Be Real If Our Eyes Aren't Real 11:23 AM · May 2, 2013",
+  "Currently Going Through Customs Even Though I Was Born On This Planet. 6:21 AM · Nov 26, 2014",
 ];
 
 client.on("messageCreate", (message) => {
@@ -104,6 +111,22 @@ message.channel.send(final_urls.join('\n'));
 }
 });
 
+// manga
+client.on('messageCreate', (message) => {
+console.log('message received');
+if (message.content.startsWith('!manga')) {
+const urls = [
+'https://mangafire.to/filter?keyword=',
+'https://mangareader.to/search?keyword=',
+'https://www.mangahere.cc/search?title=',
+];
+// Modify the regular expression to not replace spaces at the start of the string
+const user_input = message.content.slice(6).replace(/^\s+/, '').replace(/ /g, '-');
+const final_urls = urls.map(url => url + user_input);
+message.channel.send(final_urls.join('\n'));
+}
+});
 
 
+//discord token
 client.login(process.env.DISCORD_TOKEN);
