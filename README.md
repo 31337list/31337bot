@@ -15,6 +15,8 @@ commands:
 
 !jaden - jaden smith tweets lol
 
+!manga - search all manga sites
+
 -------------------------------------------------------------------------------------------
 
 
@@ -25,4 +27,4 @@ TODO:
 - adblock (ublock) link
 - admin commands
 - *a lot* more j smith quotes
-- manga search
+
