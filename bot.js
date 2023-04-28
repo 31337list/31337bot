@@ -65,7 +65,7 @@ client.on("messageCreate", (message) => {
 //commands
 client.on('messageCreate', (message) => {
   if (message.content === '!commands') {
-    message.channel.send('Commands:\n----------------------------\n!9anime - search 9anime or list 9anime mirrors\n!31337 - link to 31337\n!allanime - search all anime sites\n!jaden - jaden smith tweets lol');
+    message.channel.send('Commands:\n----------------------------\n!9anime - search 9anime or list 9anime mirrors\n!31337 - link to 31337\n!allanime - search all anime sites\n!jaden - jaden smith tweets lol\n!manga - search all manga sites');
   }
 });
 
@@ -128,5 +128,5 @@ message.channel.send(final_urls.join('\n'));
 });
 
 
-//discord token
+
 client.login(process.env.DISCORD_TOKEN);
