@@ -31,4 +31,4 @@ TODO:
 - adblock (ublock) link
 - admin commands
 - *a lot* more j smith quotes
-
+- torrent search
