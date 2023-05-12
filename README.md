@@ -26,7 +26,6 @@ commands:
 
 TODO:
 
-- repack search, games search
 - music search
 - adblock (ublock) link
 - admin commands
