@@ -65,7 +65,7 @@ client.on("messageCreate", (message) => {
 //commands
 client.on('messageCreate', (message) => {
   if (message.content === '!commands') {
-    message.channel.send('Commands:\n----------------------------\n!9anime - search 9anime or list 9anime mirrors\n!31337 - link to 31337\n!allanime - search all anime sites\n!jaden - jaden smith tweets lol\n!manga - search all manga sites');
+    message.channel.send('Commands:\n----------------------------\n!9anime - search 9anime or list 9anime mirrors\n!31337 - link to 31337\n!allanime - search all anime sites\n!jaden - jaden smith tweets lol\n!manga - search all manga sites\n!dodi - search dodi repacks (games)\n!fitgirl - search fitgirl repacks (games)');
   }
 });
 
@@ -127,6 +127,32 @@ message.channel.send(final_urls.join('\n'));
 }
 });
 
+//fitgirl
+client.on('messageCreate', (message) => {
+console.log('message received');
+if (message.content.startsWith('!fitgirl')) {
+const urls = [
+'https://fitgirl-repacks.site/?s=',
+];
+// Modify the regular expression to not replace spaces at the start of the string
+const user_input = message.content.slice(8).replace(/^\s+/, '').replace(/ /g, '+');
+const final_urls = urls.map(url => url + user_input);
+message.channel.send(final_urls.join('\n'));
+}
+});
 
+//dodi
+client.on('messageCreate', (message) => {
+console.log('message received');
+if (message.content.startsWith('!dodi')) {
+const urls = [
+'https://dodi-repacks.site/?s=',
+];
+// Modify the regular expression to not replace spaces at the start of the string
+const user_input = message.content.slice(5).replace(/^\s+/, '').replace(/ /g, '+');
+const final_urls = urls.map(url => url + user_input);
+message.channel.send(final_urls.join('\n'));
+}
+});
 
 client.login(process.env.DISCORD_TOKEN);
